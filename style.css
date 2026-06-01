@@ -1,0 +1,37 @@
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-15px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.1s infinite linear;
+  display: block;
+}
+
+body {
+  margin: 0;
+  background: white;
+  transition: background 2s ease;
+}
+
+/* 🔥 TO JEST TWOJE TŁO */
+body:has(iframe:hover) {
+  background: yellow;
+}
+
+.info-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 4px;
+  max-width: 300px;
+}
+
+/* show text when checkbox is checked */
+#info-toggle:checked ~ .info-content {
+  display: block;
+}
